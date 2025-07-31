@@ -9,7 +9,7 @@
   the pumps from running to prevent damage to the pumps
 */
 
-//Adjust only these 4 settings, No hard coded values in program
+//Adjust only these 4 settings, No other hard coded values in program
 const int pumpShutOffCount = 7; //how many times it runs before shutoff
 const int waterPumpRunTime = 15000; // pump run time in mS
 const int settleTimeAfterWatering = 30000; //settle time after all 4 sensors have been checked in mS
@@ -119,7 +119,7 @@ void loop() {
 
 
 
- // Loop1 code
+ // Loop2 code
   moistureSensorValue2 = analogRead(sensor2);
   Serial.print("MoistureLevel 2: ");
   Serial.println(moistureSensorValue2);
