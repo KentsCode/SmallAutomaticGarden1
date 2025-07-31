@@ -27,18 +27,6 @@ int moistureSensorValue2 = 0;
 int pumpRunCount2 = 0;
 bool pumpLockedOut2 = false;
 
-int pump3 = 4;
-int sensor3 = A2;
-int moistureSensorValue3 = 0;
-int pumpRunCount3 = 0;
-bool pumpLockedOut3 = false;
-
-int pump4 = 5;
-int sensor4 = A3;
-int moistureSensorValue4 = 0;
-int pumpRunCount4 = 0;
-bool pumpLockedOut4 = false;
-
 int pumpLockoutLED = 7;
 
 int waterLevelLowLED = 8;
@@ -51,19 +39,16 @@ void setup() {
   // pin declarations
   pinMode(sensor1, INPUT); //input from moisture sensor 1
   pinMode(sensor2, INPUT); //input from moisture sensor 2
-  pinMode(sensor3, INPUT); //input from moisture sensor 3
-  pinMode(sensor4, INPUT); //input from moisture sensor 4
+
 
   pinMode(pump1, OUTPUT); //output to pump relay 1
   pinMode(pump2, OUTPUT); //output to pump relay 2
-  pinMode(pump3, OUTPUT); //output to pump relay 3
-  pinMode(pump4, OUTPUT); //output to pump relay 4
+
 
   //setting all pumps to low to start
   digitalWrite(pump1, LOW); //turning off the pump
   digitalWrite(pump2, LOW); //turning off the pump
-  digitalWrite(pump3, LOW); //turning off the pump
-  digitalWrite(pump4, LOW); //turning off the pump
+
 
   pinMode(waterLevelLowSensor, INPUT); //Low water level sensor
   pinMode(waterLevelLowLED, OUTPUT); //output to low water level lockout LED
