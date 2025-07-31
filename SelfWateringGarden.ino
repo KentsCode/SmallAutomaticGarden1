@@ -1,10 +1,10 @@
 /* Kent's self watering garden project
 
   The arduino will look at each moisture sensor and decide to run a water pump for time=waterPumpRunTime
-  After all 4 moisture sensors have been checked the system will pause to allow any water to settle
+  After all moisture sensors have been checked the system will pause to allow any water to settle
   To protect the system from overflowing the pot due to a moisture sensor out of place a counter will keep
     track of how many times in a row the pump has run. If the pump has run for "pumpShutOffCount'X'" number of times
-    it will lock out that pump and turn on a red LED. Single LED for all 4 pumps but only locks out 1 pump at a time.
+    it will lock out that pump and turn on a red LED. Single LED for all pumps but only locks out 1 pump at a time.
   A sensor will monitor the water source level. If it is below a certain level it will turn on an LED and prevent
   the pumps from running to prevent damage to the pumps
 */
