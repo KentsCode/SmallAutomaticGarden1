@@ -40,15 +40,12 @@ void setup() {
   pinMode(sensor1, INPUT); //input from moisture sensor 1
   pinMode(sensor2, INPUT); //input from moisture sensor 2
 
-
   pinMode(pump1, OUTPUT); //output to pump relay 1
   pinMode(pump2, OUTPUT); //output to pump relay 2
-
 
   //setting all pumps to low to start
   digitalWrite(pump1, LOW); //turning off the pump
   digitalWrite(pump2, LOW); //turning off the pump
-
 
   pinMode(waterLevelLowSensor, INPUT); //Low water level sensor
   pinMode(waterLevelLowLED, OUTPUT); //output to low water level lockout LED
@@ -91,7 +88,6 @@ void loop() {
     Serial.println("No action this loop");
   }
 
-
   if(pumpRunCount1 >= pumpShutOffCount) {
     Serial.print("Sensor Displaced? Pump Run Count now at: ");
     Serial.println(pumpRunCount1);
@@ -99,11 +95,6 @@ void loop() {
     Serial.println(digitalRead(pumpLockoutLED));
   }
   
-
-  delay(settleTimeAfterWatering); //built in system delay
-
-
-
  // Loop2 code
   moistureSensorValue2 = analogRead(sensor2);
   Serial.print("MoistureLevel 2: ");
@@ -125,7 +116,6 @@ void loop() {
     Serial.println("No action this loop");
   }
 
-
   if(pumpRunCount2 >= pumpShutOffCount) {
     Serial.print("Sensor Displaced? Pump Run Count now at: ");
     Serial.println(pumpRunCount2);
@@ -133,6 +123,5 @@ void loop() {
     Serial.println(digitalRead(pumpLockoutLED));
   }
   
-
   delay(settleTimeAfterWatering); //built in system delay
 }
